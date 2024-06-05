@@ -1,10 +1,13 @@
 'use client'
 import React , {useState , FC} from 'react'
-// import Link from 'next/link'
-import { Link} from 'wouter'
+ import { Link } from 'wouter'
 
 
-export const Navbar: FC = ({ children }) => { // function components
+ type NavbarProps = {
+    children?: React.ReactNode;
+}
+
+export const Navbar: FC<NavbarProps> = ({ children}) => { 
 
     const [ showMenu , setShowMenu] = useState<boolean>(false)
 
