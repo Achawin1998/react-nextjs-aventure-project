@@ -4,7 +4,7 @@ import React , {useState , FC} from 'react'
 import { Link} from 'wouter'
 
 
-export const Navbar: FC = ({ children}) => { // function components
+export const Navbar: FC = ({ children }) => { // function components
 
     const [ showMenu , setShowMenu] = useState<boolean>(false)
 

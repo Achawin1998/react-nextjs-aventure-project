@@ -3,7 +3,7 @@ import { useHeroes } from "../hooks/useHeroes" // เป็นการสร้
 import { HeroesItem } from "./HeroesItem";
 
 export const HeroesList = () => {
-    const { loading , heroes} = useHeroes(); // เอาข้อมูลจาก hooks มาดึงค่า
+    const { loading , heroes } = useHeroes();
 
     return (
         <div className="bg-gray-800 min-h-screen p-3">
@@ -13,12 +13,12 @@ export const HeroesList = () => {
             <div className="flex gap-4 lg:gap-6 flex-wrap justify-center">
                 {loading ? (
                     <p>Loading...</p>
-                ): (
-                    heroes.map((data , index) => <HeroesItem key={index} heroes={data} />)  
+                ) : (
+                    heroes.map((data, index) => (
+                        <HeroesItem key={index} heroesProps={data} />
+                    ))
                 )}
-                {/* ส่งค่าไปยังอีก components ที่เอาไว้แสดง Listheroes  */}
             </div>
         </div>
-    )
-
-}
+    );
+};
